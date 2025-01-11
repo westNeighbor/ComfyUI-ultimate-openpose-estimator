@@ -40,7 +40,7 @@ If you like the project, please give me a star! ⭐
 
 ## Installation
 
-Navigate to the ComfyUI `/custom_nodes` directory
+- Navigate to the ComfyUI `/custom_nodes` directory
 
 ```bash
 git clone https://github.com/westNeighbor/ComfyUI-ultimate-openpose-estimator
@@ -51,6 +51,7 @@ if you use portable version, install requirement accordingly, for example, I hav
 ```bash
 E:/ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r requirements.txt
 ```
+- Restart ComfyUI
 
 ## Building Tensorrt Engine
 
