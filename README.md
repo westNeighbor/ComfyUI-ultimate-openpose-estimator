@@ -29,7 +29,7 @@ If you like the project, please give me a star! ⭐
 
 - Giving the detecting threshold option
     <p align="center">
-      <img src="assets/estimator_example_1.png" />
+      <img src="assets/estimator_example_2.png" />
     </p>
 - Giving output canvas resolution adjustment 
     - It will keep original picture's ratio
