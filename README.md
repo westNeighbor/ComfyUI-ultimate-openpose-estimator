@@ -35,7 +35,7 @@ If you like the project, please give me a star! ⭐
     - It will keep original picture's ratio
     - Minimum requirement for resolution\_x >= 64px, for value < 64, the output pose image will be 512px
 - Giving the plot control options for body pose, face and hands 
-    - The default size value is optimized for 1024px pictures, for smaller size picture, lower the size value, otherwise increase the size value
+    - The default marker size value is optimized for 1024px pictures, for smaller size picture, lower the marker size value, otherwise increase the marker size value
 - Giving output options of pose keypoints and json string formats for further using, check my [ultimate-openpose-editor](https://github.com/westNeighbor/ComfyUI-ultimate-openpose-editor) if you need editting the pose 
 
 ## Installation
@@ -45,7 +45,11 @@ Navigate to the ComfyUI `/custom_nodes` directory
 ```bash
 git clone https://github.com/westNeighbor/ComfyUI-ultimate-openpose-estimator
 cd ./ComfyUI-ultimate-openpose-estimator
-pip install -r requirements.txt
+pip install -r requirements.txt # if you use portable version, see below
+```
+if you use portable version, install requirement accordingly, for example, I have portable in my E: disk
+```bash
+E:/ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r requirements.txt
 ```
 
 ## Building Tensorrt Engine
