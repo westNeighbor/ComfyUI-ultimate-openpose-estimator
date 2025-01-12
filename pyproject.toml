@@ -1,7 +1,7 @@
 [project]
 name = "ultimate-openpose-estimator"
 description = "Super fast tensorrt performance with accuate pose estimation of dwpose model, giving the detecting threshold control, plus pose image render and pose json format output. Fine control for pose plotting."
-version = "1.0.0"
+version = "0.9.1"
 license = {file = "LICENSE"}
 dependencies = ["tensorrt", "polygraphy", "numpy", "tqdm", "opencv-python", "matplotlib"]
 
