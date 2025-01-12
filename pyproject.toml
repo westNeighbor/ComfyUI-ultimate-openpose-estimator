@@ -1,0 +1,15 @@
+[project]
+name = "ultimate-openpose-estimator"
+description = "Super fast tensorrt performance with accuate pose estimation of dwpose model, giving the detecting threshold control, plus pose image render and pose json format output. Fine control for pose plotting."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["tensorrt", "polygraphy", "numpy", "tqdm", "opencv-python", "matplotlib"]
+
+[project.urls]
+Repository = "https://github.com/westNeighbor/ComfyUI-ultimate-openpose-estimator"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "west-neighbor"
+DisplayName = "ComfyUI-ultimate-openpose-estimator"
+Icon = ""
