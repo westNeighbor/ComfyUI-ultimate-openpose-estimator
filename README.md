@@ -62,7 +62,7 @@ E:/ComfyUI_windows_portable/python_embeded/python.exe -m pip install -r requirem
 
    - `python export_trt.py`
 
-3. Place the exported engines inside ComfyUI `/models/tensorrt/dwpose` directory
+3. Place the exported engines (`yolox_l.engine` and `dw-ll_ucoco_384.engine`) inside ComfyUI `/models/tensorrt/dwpose` directory
 
 ## Usage
 
