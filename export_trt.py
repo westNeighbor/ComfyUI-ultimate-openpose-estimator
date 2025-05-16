@@ -1,6 +1,6 @@
 import torch
 import time
-from custom_nodes.ComfyUI_Dwpose_Tensorrt.trt_utilities import Engine
+from trt_utilities import Engine
 
 
 def export_trt(trt_path: str, onnx_path: str, use_fp16: bool):
