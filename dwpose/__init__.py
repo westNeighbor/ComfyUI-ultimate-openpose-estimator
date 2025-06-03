@@ -77,30 +77,30 @@ class DWposeDetector:
         for i in range(len(score)):
             score = org_subset[:,:18][i].tolist()
             body_xy = org_candidate[:, :18][i].tolist()
-            body_keypoints = [[body_xy[j][0],body_xy[j][1],1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
+            body_keypoints = [[body_xy[j][0]/float(W),body_xy[j][1]/float(H),1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
             body_keypoints = [item for point in body_keypoints for item in point]
 
             lhand_xy = org_candidate[:, 92:113][i].tolist()
             score = org_subset[:,92:113][i].tolist()
-            left_hand = [[lhand_xy[j][0],lhand_xy[j][1],1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
+            left_hand = [[lhand_xy[j][0]/float(W),lhand_xy[j][1]/float(H),1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
             left_hand = [item for point in left_hand for item in point]
 
             rhand_xy = org_candidate[:, 113:134][i].tolist()
             score = org_subset[:,113:134][i].tolist()
-            right_hand = [[rhand_xy[j][0],rhand_xy[j][1],1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
+            right_hand = [[rhand_xy[j][0]/float(W),rhand_xy[j][1]/float(H),1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
             right_hand = [item for point in right_hand for item in point]
 
             face_xy = org_candidate[:, 24:92][i].tolist()
             score = org_subset[:,24:92][i].tolist()
-            face = [[face_xy[j][0],face_xy[j][1],1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
+            face = [[face_xy[j][0]/float(W),face_xy[j][1]/float(H),1.0] if score[j] > detect_threshold else [0.0, 0.0, 0.0] for j in range(len(score))]
             face = [item for point in face for item in point]
 
             if face is not None:
                 score = org_subset[:,:18][i].tolist()
                 # left eye
                 if score[14] > detect_threshold:
-                    face.append(body_xy[14][0])
-                    face.append(body_xy[14][1])
+                    face.append(body_xy[14][0]/float(W))
+                    face.append(body_xy[14][1]/float(H))
                     face.append(1.0)
                 else:
                     face.append(0.0)
@@ -108,8 +108,8 @@ class DWposeDetector:
                     face.append(0.0)
                 # right eye
                 if score[15] > detect_threshold:
-                    face.append(body_xy[15][0])
-                    face.append(body_xy[15][1])
+                    face.append(body_xy[15][0]/float(W))
+                    face.append(body_xy[15][1]/float(H))
                     face.append(1.0)
                 else:
                     face.append(0.0)
